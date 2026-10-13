@@ -24,6 +24,7 @@ rust_defaults {
 
 rust_library {
     name: "libaconfig_storage_file",
+    recovery_available: true,
     crate_name: "aconfig_storage_file",
     host_supported: true,
     defaults: ["aconfig_storage_file.defaults"],
@@ -97,6 +98,7 @@ rust_test_host {
 
 rust_protobuf {
     name: "libaconfig_storage_protos",
+    recovery_available: true,
     protos: ["protos/aconfig_storage_metadata.proto"],
     crate_name: "aconfig_storage_protos",
     source_stem: "aconfig_storage_protos",

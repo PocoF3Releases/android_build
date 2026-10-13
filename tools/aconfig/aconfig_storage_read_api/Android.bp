@@ -22,6 +22,7 @@ rust_defaults {
 
 rust_library {
     name: "libaconfig_storage_read_api",
+    recovery_available: true,
     crate_name: "aconfig_storage_read_api",
     host_supported: true,
     vendor_available: true,
@@ -90,6 +91,7 @@ genrule {
 // a static cc lib based on generated code
 rust_ffi_static {
     name: "libaconfig_storage_read_api_cxx_bridge",
+    recovery_available: true,
     crate_name: "aconfig_storage_read_api_cxx_bridge",
     host_supported: true,
     vendor_available: true,
@@ -113,6 +115,7 @@ rust_ffi_static {
 // flag read api cc interface
 cc_library {
     name: "libaconfig_storage_read_api_cc",
+    recovery_available: true,
     srcs: ["aconfig_storage_read_api.cpp"],
     generated_headers: [
         "cxx-bridge-header",
